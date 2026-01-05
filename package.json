@@ -9,6 +9,7 @@
     "migrate:prod": "NODE_ENV=production sequelize-cli db:migrate",
     "undo": "sequelize-cli db:migrate:undo",
     "undo:all": "sequelize-cli db:migrate:undo:all",
+    "lint:fix": "eslint . --fix",
     "lint": "eslint .",
     "prepare": "husky"
   },
