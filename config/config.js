@@ -1,13 +1,13 @@
 const path = require("path");
 
-const env = process.env.NODE_ENV || "build";
+const env = process.env.NODE_ENV || "development";
 
 require("dotenv").config({
   path: path.resolve(process.cwd(), `.env.${env}`),
 });
 
 if (env === "production") {
-  console.warn("🚨 Running migrations in PRODUCTION");
+  console.warn("Running migrations in PRODUCTION");
   console.warn(`DB_HOST=${process.env.DB_HOST}`);
   console.warn(`DB_NAME=${process.env.DB_NAME}`);
 
