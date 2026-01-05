@@ -4,5 +4,5 @@
 
 ## Type of change
 
-- [ ] migration: Database migration
+- [ ] feat: Database migration
 - [ ] chore: Internal change / copy / refactor
