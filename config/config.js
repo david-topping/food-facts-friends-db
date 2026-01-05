@@ -7,16 +7,13 @@ require("dotenv").config({
 });
 
 if (env === "production") {
-  console.warn("Running migrations in PRODUCTION");
+  console.warn("🚨 Running migrations in PRODUCTION");
   console.warn(`DB_HOST=${process.env.DB_HOST}`);
   console.warn(`DB_NAME=${process.env.DB_NAME}`);
-}
 
-if (
-  env === "production" &&
-  ["127.0.0.1", "localhost"].includes(process.env.DB_HOST)
-) {
-  console.warn("PROD database appears to be on localhost");
+  if (["127.0.0.1", "localhost"].includes(process.env.DB_HOST)) {
+    console.warn(" PROD database appears to be on localhost");
+  }
 }
 
 const base = {
@@ -30,6 +27,7 @@ const base = {
 
 module.exports = {
   development: base,
+  build: base,
   test: base,
   production: base,
 };
