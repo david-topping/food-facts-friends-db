@@ -27,7 +27,5 @@ const base = {
 
 module.exports = {
   development: base,
-  build: base,
-  test: base,
   production: base,
 };
